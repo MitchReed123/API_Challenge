@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import DisplayFetch from "./displayFetch/displayFetch";
 
+// import styling components
+import { makeStyles } from '@material-ui/core/styles';
+import styled from 'styled-components'
+
+
+
 export default class Fetch extends Component {
   constructor(props) {
     super(props);
@@ -38,11 +44,11 @@ export default class Fetch extends Component {
   render() {
     return (
       <div>
-        <h1>Hello World</h1>
-        <img
+        <h1 id="NASA-header">NASA Satellite</h1>
+        <img id="NASA-image"
           src={this.state.img}
           alt="test"
-          style={{ width: "250px", height: "250px" }}
+          // style={{ width: "250px", height: "250px" }}
         />
       </div>
     );

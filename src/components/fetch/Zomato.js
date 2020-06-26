@@ -1,6 +1,25 @@
 import React, { Component } from "react";
 //import './app.css';
+
+import Restaurant from '../../assests/restaurant.png';
+
+// import styling components
+// import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/icons';
+import styled from 'styled-components'
+
+const Resize = styled.img`
+   
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+`;
+
+
+
 export default class Zomato extends Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -49,7 +68,7 @@ export default class Zomato extends Component {
   render() {
     return (
       <div>
-        <h2>Local Restaurants: </h2>
+        <h1> <Resize src={Restaurant} />Local Restaurants</h1>
         <ul>
           <li>{this.state.nearby_restaurants}</li>
           <li>{this.state.nearby_restaurants1}</li>

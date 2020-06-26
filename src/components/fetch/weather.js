@@ -1,7 +1,20 @@
 import React, { Component } from "react";
 import DisplayFetch from "./displayFetch/displayFetch";
+import Cloud from '../../assests/cloud.png';
+
+// import styling components
+// import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/icons';
+import styled from 'styled-components'
+
+const Resize = styled.img`
+    margin-right: 20px;
+    margin-top: 10px;
+`;
+
 
 export default class Weather extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -55,10 +68,10 @@ export default class Weather extends Component {
   render() {
     return (
       <div>
-        <h1>Weather</h1>
-        <p>{this.state.temp}</p>
-        <p>{this.state.feels_like}</p>
-        <p>{this.state.description}</p>
+        <h1><Resize src={Cloud} />Local Weather </h1> 
+        <p>Temp: {this.state.temp}</p>
+        <p>Feels like: {this.state.feels_like}</p>
+        <p>Current weather: {this.state.description}</p>
       </div>
     );
   }
